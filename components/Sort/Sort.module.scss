@@ -1,0 +1,29 @@
+.sort {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+
+    .sortWrapper {
+        display: grid;
+        cursor: pointer;
+        gap: 11px;
+        align-items: baseline;
+        svg {
+            display: none;
+        }
+
+        &:not(.active) {
+            grid-template-columns: 1fr;
+        }
+        &.active {
+            grid-template-columns: 20px 1fr;
+            font-weight: 700;
+            color: var(--primary);
+            svg {
+                display: block;
+            }
+        }
+    }
+}
