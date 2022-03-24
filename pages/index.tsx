@@ -10,6 +10,8 @@ import styles from "../styles/Home.module.css";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuDTO } from "interfaces/menu.interface";
+import { Input, TextArea } from "components";
+import { Product } from "components/Product/Product";
 
 interface HomeProps extends Record<string, unknown> {
   menu: MenuDTO.Item[];
@@ -28,7 +30,6 @@ function Home(props: HomeProps): JSX.Element {
 
   return (
     <>
-
       <Rating isEditable={true} currentValue={0} items={7} />
       <Rating isEditable={true} currentValue={4} items={10} />
       <H1>{counter}</H1>
@@ -40,7 +41,8 @@ function Home(props: HomeProps): JSX.Element {
         маркетологами. Выпускники факультета могут успешно конкурировать с
         веб-дизайнерами уровня middle.
       </P>
-
+      <Input placeholder="Имя" />
+      <TextArea placeholder="placeholder">111</TextArea>
     </>
   );
 }

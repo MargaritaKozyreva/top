@@ -12,7 +12,7 @@ interface RaitingProps {
 
 const Rating: React.FC<RaitingProps> = React.memo((props) => {
   const { items = 1, currentValue = 0, isEditable = false } = props;
-  const fillCount = (currentValue * items) / 100;
+  //const fillCount = (currentValue * items) / 100;
   const [ratingArray, setArray] = useState<JSX.Element[]>(
     Array.from(Array(items).fill(<></>))
   );
@@ -44,7 +44,7 @@ const Rating: React.FC<RaitingProps> = React.memo((props) => {
     event: KeyboardEvent<SVGAElement>
   ) => {
     if (event.code !== "Space") {
-      return
+      return;
     }
     setNewRatingValue(newRaiting);
   };

@@ -1,4 +1,4 @@
-import { Card, HhData, Tag } from "components";
+import { Card, HhData, Product, Tag } from "components";
 import { BenefitSections } from "components/Benefits/Benefits";
 import Sort, { SortEnum } from "components/Sort/Sort";
 import { H1, H2, P, Span } from "components/Text";
@@ -38,7 +38,7 @@ const TopPageComponent: React.FC<TopPageComponent> = (props) => {
       <div>
         {sortState.products &&
           sortState.products.map((product) => (
-            <div key={product._id}>{product.title}</div>
+            <Product key={product._id} product={product} />
           ))}
       </div>
       <div className={styles.hhTitle}>

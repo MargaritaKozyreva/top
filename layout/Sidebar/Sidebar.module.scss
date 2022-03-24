@@ -2,4 +2,8 @@
     display: grid;
     gap: 20px;
     align-content: start;
+
+    .logo {
+        cursor: pointer;
+    }
 }

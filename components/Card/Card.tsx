@@ -6,7 +6,7 @@ import { HTMLAttributes } from "react";
 
 interface CardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  design: "white" | "blue";
+  design?: "white" | "blue";
 }
 
 export const Card: React.FC<PropsWithChildren<CardProps>> = (props) => {
